@@ -8,19 +8,19 @@ interface Api {
 
     @GET("movie/popular")
     fun getPopularMovies(
-        @Query("api_key") apiKey: String = "657e99233c17f4a294f4193ec0979817",
+        @Query("api_key") apiKey: String = BuildConfig.API_KEY,
         @Query("page") page: Int
     ): Call<GetMoviesResponse>
 
     @GET("movie/top_rated")
     fun getTopRatedMovies(
-        @Query("api_key") apiKey: String = "657e99233c17f4a294f4193ec0979817",
+        @Query("api_key") apiKey: String = BuildConfig.API_KEY,
         @Query("page") page: Int
     ): Call<GetMoviesResponse>
 
     @GET("movie/upcoming")
     fun getUpcomingMovies(
-        @Query("api_key") apiKey: String = "657e99233c17f4a294f4193ec0979817",
+        @Query("api_key") apiKey: String = BuildConfig.API_KEY,
         @Query("page") page: Int
     ): Call<GetMoviesResponse>
 }
